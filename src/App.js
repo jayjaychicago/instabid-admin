@@ -1,20 +1,13 @@
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
+
 import { InstabidSidebar } from './components/InstabidSidebar';
+import { InstabidTopMenu } from './components/InstabidTopMenu';
 
 import './assets/styles/App.scss';
 
 function App() {
   return (
       <>
-        <Navbar expand="xl" variant="dark" bg="instabid">
-          <Container>
-            <Navbar.Brand bsPrefix="instabid-nav-brand" href="#"><span>Instabid</span>Admin</Navbar.Brand>
-            <Navbar.Text>
-              Signed in as: <a href="#login">Julien Jacquet</a>
-            </Navbar.Text>
-          </Container>
-        </Navbar>
+        <InstabidTopMenu />
         <InstabidSidebar />
       </>
   );
