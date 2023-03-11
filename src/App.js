@@ -1,41 +1,27 @@
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
-import { InstabidSidebar } from './components/InstabidSidebar';
-import { InstabidTopMenu } from './components/InstabidTopMenu';
+import { MyProducts } from './pages/MyProducts';
 
 import './assets/styles/App.scss';
 
 function App() {
-  return (
-      <>
-        <InstabidTopMenu />
-        <InstabidSidebar />
-      </>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <MyProducts />,
+    },
+    {
+      path: "/products",
+      element: <MyProducts />
+    }
+  ]);
 
-//   <SubMenu label="Charts">
-//   <MenuItem> Pie charts </MenuItem>
-//   <MenuItem> Line charts </MenuItem>
-// </SubMenu>
-// <MenuItem> Documentation </MenuItem>
-// <MenuItem> Calendar </MenuItem>
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
+  return (
+    <RouterProvider router={router} />
+  );
 }
 
 export default App;
