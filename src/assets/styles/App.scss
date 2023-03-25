@@ -2,8 +2,10 @@
 
 /* make the customizations */
 $theme-colors: (
-    "info": tomato,
-    "danger": teal,
+  "info": tomato,
+  "danger": teal,
+  "primary": #1D809F,
+
 );
 
 $body-bg: #E9ECF2;
@@ -49,6 +51,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
