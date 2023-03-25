@@ -10,7 +10,7 @@ export class InstabidTopMenu extends React.PureComponent {
                 <Container>
                     <Navbar.Brand bsPrefix="instabid-nav-brand" href="#"><span>Instabid</span>Admin</Navbar.Brand>
                     <Navbar.Text>
-                    Signed in as: <a href="#login">Julien Jacquet</a>
+                        Signed in as: {`${this.props.user.given_name} ${this.props.user.family_name}`}
                     </Navbar.Text>
                 </Container>
             </Navbar>
